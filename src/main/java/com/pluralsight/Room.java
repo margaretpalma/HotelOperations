@@ -6,6 +6,13 @@ public class Room {
     private boolean isOccupied;
     private boolean isDirty;
 
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
+        this.numberOfBeds = numberOfBeds;
+        this.price = 120.00;
+        this.isOccupied = false;
+        this.isDirty = false;
+    }
+
     public int getNumberOfBeds() {
         return numberOfBeds;
     }
@@ -38,16 +45,27 @@ public class Room {
         isDirty = dirty;
     }
 
-    public boolean isAvailable(){
+    public boolean isAvailable() {
         return (!isOccupied && !isDirty);
     }
+    public void checkIn(){
+        this.isDirty = true;
+        this.isOccupied = true;
+}
 
+    public void checkout(){
+        if(!isOccupied){
+            this.isDirty = false;
+        }
+    }
     @Override
     public String toString() {
-        return  "Room{" +
+        return "Room{" +
                 "numberOfBeds=" + numberOfBeds +
                 ", price=" + price +
                 ", isOccupied=" + isOccupied +
-
+                ", isDirty=" + isDirty +
+                ", isAvailable=" + isAvailable() +
+                "}";
     }
-}
+    }
