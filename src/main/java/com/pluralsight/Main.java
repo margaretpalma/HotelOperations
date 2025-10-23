@@ -39,5 +39,27 @@ public class Main {
         for(Reservation r : reservations) {
             System.out.println(r);
         }
+
+        //arraylist for employees
+
+        ArrayList<Employee> employees = new ArrayList<>();
+
+        Employee emp1 = new Employee(1, "Margaret", "Front Desk", 10, 35);
+        Employee emp2 = new Employee(1, "Clancy", "IT", 10, 35);
+        Employee emp3 = new Employee(1, "Scout", "Help Desk", 10, 35);
+        Employee emp4 = new Employee(1, "Leah", "CEO", 20, 41);
+
+        employees.add(emp1);
+        employees.add(emp2);
+        employees.add(emp3);
+        employees.add(emp4);
+
+        for(Employee e : employees){
+            System.out.println(e);
+
+
+
+
+    }
     }
 }
