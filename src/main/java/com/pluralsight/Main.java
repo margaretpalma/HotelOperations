@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println("Rooms are new ");
         ArrayList<Room> rooms = new ArrayList<>();
 
 
@@ -17,7 +17,15 @@ public class Main {
         rooms.add(r102);
         rooms.add(r103);
         rooms.add(r104);
+        for (Room r : rooms) {
+            System.out.println(r);
+        }
 
+        System.out.println("Rooms have 2 checked out:");
+
+
+        r101.checkIn();
+        r102.checkIn();
 
         for (Room r : rooms) {
             System.out.println(r);
@@ -36,30 +44,39 @@ public class Main {
         reservations.add(res3);
         reservations.add(res4);
 
-        for(Reservation r : reservations) {
+        for (Reservation r : reservations) {
             System.out.println(r);
         }
 
-        //arraylist for employees
+        System.out.println("One Room checked out");
 
-        ArrayList<Employee> employees = new ArrayList<>();
+        r102.checkout();
 
-        Employee emp1 = new Employee(1, "Margaret", "Front Desk", 10, 35);
-        Employee emp2 = new Employee(1, "Clancy", "IT", 10, 35);
-        Employee emp3 = new Employee(1, "Scout", "Help Desk", 10, 35);
-        Employee emp4 = new Employee(1, "Leah", "CEO", 20, 41);
-
-        employees.add(emp1);
-        employees.add(emp2);
-        employees.add(emp3);
-        employees.add(emp4);
-
-        for(Employee e : employees){
-            System.out.println(e);
+        for (Reservation r : reservations) {
+            System.out.println(r);
 
 
+            //arraylist for employees
+
+            ArrayList<Employee> employees = new ArrayList<>();
+
+            Employee emp1 = new Employee(1, "Margaret", "Front Desk", 10, 35);
+            Employee emp2 = new Employee(1, "Clancy", "IT", 10, 35);
+            Employee emp3 = new Employee(1, "Scout", "Help Desk", 10, 35);
+            Employee emp4 = new Employee(1, "Leah", "CEO", 20, 41);
+
+            employees.add(emp1);
+            employees.add(emp2);
+            employees.add(emp3);
+            employees.add(emp4);
+
+            for (Employee e : employees) {
+                System.out.println(e);
 
 
-    }
+
+
+            }
+        }
     }
 }

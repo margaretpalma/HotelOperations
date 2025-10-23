@@ -33,13 +33,29 @@ public class Room {
         return !(isOccupied || isDirty);
     }
 
-    @Override
-    public String toString() {
-        return "Room{" +
-                "numberOfBeds=" + numberOfBeds +
-                ", price=" + price +
-                ", isOccupied=" + isOccupied +
-                ", isDirty=" + isDirty +
-                '}';
+    public void checkIn() {
+        this.isDirty = true;
+        this.isOccupied = true;
+        System.out.println("Guest Checked in");
     }
-}
+    public void checkout(){
+        this.isOccupied = false;
+    }
+    public void cleanRoom() {
+        if (!isOccupied) {
+            this.isDirty = false;
+        }
+    }
+
+        @Override
+        public String toString() {
+            return "Room{" +
+                    "numberOfBeds=" + numberOfBeds +
+                    ", price=" + price +
+                    ", isOccupied=" + isOccupied +
+                    ", isDirty=" + isDirty +
+                    ", isAvailable=" + isAvailable() +
+                    '}';
+        }
+
+    }
