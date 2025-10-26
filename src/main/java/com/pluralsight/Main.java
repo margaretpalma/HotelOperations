@@ -71,14 +71,21 @@ public class Main {
                 System.out.println(e);
             }
 
-            emp1.punchIn(8);
-            emp1.punchOut(12);
+        emp1.punchTimeCard(8, 12);
+        emp1.punchTimeCard(13,17);
 
-            emp1.punchIn(13);
-            emp1.punchOut(17);
+        emp1.logHours(40);
 
+        emp2.punchIn(8);
+        emp2.punchOut();
 
+        System.out.println("after");
 
-
+        for(Employee e : employees){
+            System.out.println(e);
         }
+
+
+
     }
+}
