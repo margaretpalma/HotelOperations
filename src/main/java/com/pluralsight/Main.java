@@ -52,15 +52,12 @@ public class Main {
 
         r102.checkout();
 
-        for (Reservation r : reservations) {
-            System.out.println(r);
-
 
             //arraylist for employees
-
+        System.out.println("-----------");
             ArrayList<Employee> employees = new ArrayList<>();
-
-            Employee emp1 = new Employee(1, "Margaret", "Front Desk", 10, 35);
+            System.out.println("Before");
+            Employee emp1 = new Employee(1, "Margaret", "Front Desk", 10, 0);
             Employee emp2 = new Employee(1, "Clancy", "IT", 10, 35);
             Employee emp3 = new Employee(1, "Scout", "Help Desk", 10, 35);
             Employee emp4 = new Employee(1, "Leah", "CEO", 20, 41);
@@ -72,11 +69,16 @@ public class Main {
 
             for (Employee e : employees) {
                 System.out.println(e);
-
-
-
-
             }
+
+            emp1.punchIn(8);
+            emp1.punchOut(12);
+
+            emp1.punchIn(13);
+            emp1.punchOut(17);
+
+
+
+
         }
     }
-}
